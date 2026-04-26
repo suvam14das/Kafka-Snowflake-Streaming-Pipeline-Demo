@@ -3,9 +3,9 @@
 This project demonstrates a complete Data Engineering pipeline that polls weather data from an external API, produces it to a Kafka topic, and consumes it into a Snowflake Data Warehouse for real-time analysis and hourly aggregation.
 
 ## Architecture
-1.  **Producer**: A Python script (`weather-api-producer.py`) that polls the OpenWeatherMap API every 10 seconds.
+1.  **Producer**: A Python script ([`weather-api-producer.py`](https://github.com/suvam14das/Kafka-Snowflake-Streaming-Pipeline-Demo/blob/main/weather-api-producer.py)) that polls the OpenWeatherMap API every 10 seconds.
 2.  **Streaming Platform**: A 3-node Kafka cluster running locally via Docker Compose.
-3.  **Consumer**: A Python script (`weather-stream-consumer.py`) that reads from Kafka and performs an idempotent insert into Snowflake.
+3.  **Consumer**: A Python script ([`weather-stream-consumer.py`](https://github.com/suvam14das/Kafka-Snowflake-Streaming-Pipeline-Demo/blob/main/weather-stream-consumer.py)) that reads from Kafka and performs an idempotent insert into Snowflake.
 4.  **Data Warehouse**: Snowflake handles the storage, semi-structured data parsing, and hourly aggregations using Streams and Tasks.
 
 ## Prerequisites
@@ -31,7 +31,7 @@ This project demonstrates a complete Data Engineering pipeline that polls weathe
    ```
 
 ### 2. Snowflake Environment Setup
-Run the following SQL commands in your Snowflake worksheet to initialize the database objects, CDC stream, and the automated aggregation task.
+Run the following SQL commands in your Snowflake worksheet to initialize the database objects, CDC stream, and the automated aggregation task. Follow the rest of the pipeline setup code in [Weather-stream-notebook.ipynb](https://github.com/suvam14das/Kafka-Snowflake-Streaming-Pipeline-Demo/blob/main/Weather-stream-notebook.ipynb)
 
 ```sql
 -- 1. Create Database
