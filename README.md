@@ -43,6 +43,7 @@ CREATE OR REPLACE TABLE WEATHER_TABLE (
     DATA VARIANT,
     INGESTED_AT TIMESTAMP DEFAULT SYSDATE()
 );
+```
 
 ### 3. Application Setup
 1.  Install dependencies:
