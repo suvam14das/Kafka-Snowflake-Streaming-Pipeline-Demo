@@ -4,7 +4,7 @@ import requests
 import json
 from kafka import KafkaProducer
 
-API_KEY = "6b12030e61695e0e2352bb6755e088f9"
+API_KEY = "<API KEY>"
 CITY = "Bangalore"
 BASIC_URL_TEMPLATE = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}"
 
