@@ -10,7 +10,7 @@ This project demonstrates a complete Data Engineering pipeline that polls weathe
 
 ## Prerequisites
 
--   **Python 3.10+**
+-   **Python 3.11.8**
 -   **Docker & Docker Desktop**: 
     1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your operating system.
     2. Start the Docker Desktop. This will start the Docker Engine by default. The UI should say 'Engine running'. 
@@ -31,7 +31,7 @@ This project demonstrates a complete Data Engineering pipeline that polls weathe
    ```
 
 ### 2. Snowflake Environment Setup
-Run the following SQL commands in your Snowflake worksheet to initialize the database objects, CDC stream, and the automated aggregation task. Follow the rest of the pipeline setup code in [Weather-stream-notebook.ipynb](https://github.com/suvam14das/Kafka-Snowflake-Streaming-Pipeline-Demo/blob/main/Weather-stream-notebook.ipynb)
+Run the following SQL commands in your Snowflake worksheet to initialize the database table for consumer to push data in. the rest of the snowflake script is to create a medalian architecture streaming pipeline. Follow the rest of the pipeline setup code in [Weather-stream-notebook.ipynb](https://github.com/suvam14das/Kafka-Snowflake-Streaming-Pipeline-Demo/blob/main/Weather-stream-notebook.ipynb)
 
 ```sql
 -- 1. Create Database
